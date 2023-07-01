@@ -1,0 +1,3 @@
+[build]
+# Needed in order to run Tokio tracing console
+rustflags = ["--cfg", "tokio_unstable"]

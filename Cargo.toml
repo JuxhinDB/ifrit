@@ -1,0 +1,40 @@
+[workspace]
+members = [
+    "ifrit-core",
+    "ifrit-net",
+    "capsules/ripnet",
+    "capsules/logger",
+]
+
+[package]
+name = "ifrit"
+version = "0.1.0"
+authors = ["Juxhin Dyrmishi Brigjaj"]
+edition = "2018"
+
+[workspace.dependencies]
+anyhow = "1.0.71"
+thiserror = "1.0.40"
+tcprint = "0.1.5"
+ifrit-core = { path = "ifrit-core" }
+ifrit-net = { path = "ifrit-net" }
+tokio = { version = "1.28.1", features = ["full", "tracing"] }
+async-trait = "0.1.68"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["fmt", "std", "time"] }
+
+
+[dependencies]
+ifrit-core = { workspace = true }
+ifrit-net = { workspace = true }
+
+ripnet = { path = "capsules/ripnet" }
+logger = { path = "capsules/logger" }
+
+# FIXME(jdb): more granular feature flags for tokio
+console-subscriber = "0.1.9"
+tokio = { workspace = true }
+anyhow = { workspace = true }
+tcprint = { workspace = true }
+tracing-subscriber = { workspace = true }
+tracing = { workspace = true }

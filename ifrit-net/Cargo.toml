@@ -1,0 +1,10 @@
+[package]
+name = "ifrit-net"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pnet = "0.33.0"
+tokio = { workspace = true }
+async-trait = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,10 @@
+[package]
+name = "ifrit-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tokio = { version = "1.28.1", features = ["sync"]}
+async-trait = "0.1.68"
